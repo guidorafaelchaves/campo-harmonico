@@ -6,6 +6,9 @@ Este repositorio nasceu de um prototipo em HTML unico. A parte que vale preserva
 
 ## Estado atual
 
+- `index.html`: primeira versao redesenhada do app.
+- `src/app.js`: motor interativo, braco virtual, missoes e fluxo randomico.
+- `src/styles.css`: interface nova centrada no braco.
 - `legacy/curso_campo_harmonico_baixo_html.html`: prototipo original preservado como referencia.
 - `docs/PRODUCT_PHILOSOPHY.md`: nova filosofia do produto.
 - `docs/ROADMAP.md`: plano de evolucao.
@@ -42,9 +45,22 @@ O app deixa de perguntar "qual sequencia voce quer tocar?" e passa a propor:
 
 ## Proximo marco
 
-Criar um MVP novo com tres modos:
+Evoluir o MVP atual com tres modos mais completos:
 
 - **Explorar**: brincar com I, IV, V, vi e ver/ouvir o braco reagir.
 - **Missao**: desafios de 2 a 5 minutos com objetivo claro.
-- **Tocar junto**: loop curto, metrônomo, destaque da proxima nota e acompanhamento.
+- **Tocar junto**: loop curto, metronomo, destaque da proxima nota e acompanhamento.
 
+## Como abrir localmente
+
+Abra `index.html` no navegador. O app nao depende de instalacao, build ou servidor.
+
+## Primeira versao redesenhada
+
+A nova tela prioriza:
+
+- Braco virtual grande e clicavel.
+- Graus harmonicos como botoes simples.
+- Missoes curtas em vez de biblioteca infinita.
+- Fluxo randomico continuo, com tempo por sequencia configuravel.
+- Exemplos de musicas reais onde a familia da progressao aparece.

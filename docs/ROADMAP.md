@@ -10,13 +10,14 @@
 
 Objetivo: substituir a sensacao de lista imensa por uma primeira experiencia divertida em ate 5 minutos.
 
-- [ ] Criar `src/` com app separado em HTML, CSS e JS.
-- [ ] Reaproveitar o braco visual como componente central.
-- [ ] Criar tela inicial direto no modo Playground.
-- [ ] Reduzir controles visiveis: tom, camada, regiao, tocar/parar.
-- [ ] Adicionar botoes grandes de graus harmonicos.
-- [ ] Criar 5 progressoes guiadas iniciais.
-- [ ] Remover auto treino global do MVP.
+- [x] Criar `src/` com app separado em HTML, CSS e JS.
+- [x] Reaproveitar o braco visual como componente central.
+- [x] Criar tela inicial direto no modo Playground.
+- [x] Reduzir controles visiveis: tom, camada, regiao, tocar/parar.
+- [x] Adicionar botoes grandes de graus harmonicos.
+- [x] Criar progressoes guiadas iniciais.
+- [x] Substituir auto treino global por fluxo randomico configuravel.
+- [x] Adicionar exemplos de musicas reais por familia de progressao.
 
 ## Marco 2: Missoes
 
@@ -65,4 +66,3 @@ Objetivo: fazer o app soar menos mecanico.
 - [ ] Publicar GitHub Pages.
 - [ ] Criar issues a partir do backlog.
 - [ ] Escrever README com screenshots.
-

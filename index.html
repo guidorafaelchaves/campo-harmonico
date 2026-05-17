@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campo Harmonico no Baixo</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Baixo + ouvido + braco</p>
+          <h1>Campo harmonico no baixo</h1>
+          <p class="lead">
+            Estude harmonia como caminho no instrumento: ouca a gravidade,
+            veja as notas no braco e repita loops pequenos ate virarem instinto.
+          </p>
+        </div>
+        <div class="session-card" aria-live="polite">
+          <span class="session-label">Agora</span>
+          <strong id="currentProgressionName">I - V - vi - IV</strong>
+          <span id="currentProgressionFeeling">Casa, tensao, cor menor e abertura.</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="workbench" aria-labelledby="playgroundTitle">
+          <aside class="control-rail">
+            <div class="panel compact">
+              <h2 id="playgroundTitle">Playground</h2>
+              <label>
+                Tom
+                <select id="keySelect"></select>
+              </label>
+              <label>
+                Camada
+                <select id="layerSelect">
+                  <option value="root">So tonica</option>
+                  <option value="root5">Tonica + quinta</option>
+                  <option value="triad">Triade</option>
+                  <option value="seventh">Tetrade</option>
+                  <option value="path">Caminho ate o proximo acorde</option>
+                </select>
+              </label>
+              <label>
+                Regiao do braco
+                <select id="regionSelect">
+                  <option value="low">Casas 0-5</option>
+                  <option value="mid" selected>Casas 3-8</option>
+                  <option value="high">Casas 7-12</option>
+                  <option value="all">Todo o braco</option>
+                </select>
+              </label>
+              <label>
+                BPM
+                <input id="bpmInput" type="range" min="45" max="140" value="76" />
+                <span><strong id="bpmValue">76</strong> bpm</span>
+              </label>
+              <div class="button-grid">
+                <button id="playButton" class="primary">Tocar loop</button>
+                <button id="stopButton">Parar</button>
+              </div>
+            </div>
+
+            <div class="panel compact">
+              <h2>Graus</h2>
+              <div id="degreeButtons" class="degree-grid"></div>
+              <p class="microcopy">
+                Toque um grau para sentir sua funcao no tom. Depois compare as
+                mesmas notas em outra regiao do braco.
+              </p>
+            </div>
+
+            <div class="panel compact">
+              <h2>Estudo randomico</h2>
+              <label>
+                Tempo por sequencia
+                <input id="randomSeconds" type="number" min="5" max="90" value="20" />
+                <span>segundos</span>
+              </label>
+              <label>
+                Filtro
+                <select id="randomScope">
+                  <option value="guided">Essenciais primeiro</option>
+                  <option value="all">Todas as sequencias</option>
+                  <option value="cadence">Cadencias</option>
+                  <option value="color">Cores populares</option>
+                </select>
+              </label>
+              <div class="button-grid">
+                <button id="randomStart" class="primary">Iniciar fluxo</button>
+                <button id="randomNext">Sortear agora</button>
+                <button id="randomStop">Encerrar</button>
+              </div>
+              <div class="timer">
+                <span id="randomStatus">Fluxo parado.</span>
+                <meter id="randomMeter" min="0" max="100" value="0"></meter>
+              </div>
+            </div>
+          </aside>
+
+          <section class="stage" aria-label="Braco virtual interativo">
+            <div class="stage-header">
+              <div>
+                <p class="eyebrow">Braco virtual</p>
+                <h2 id="stageTitle">Veja a harmonia andando</h2>
+                <p id="stageSubtitle">
+                  As notas claras pertencem ao tom; as fortes pertencem ao
+                  acorde; a nota amarela e o alvo tocando agora.
+                </p>
+              </div>
+              <div class="chord-display">
+                <span id="currentRoman">I</span>
+                <strong id="currentChord">C</strong>
+              </div>
+            </div>
+
+            <div id="sequenceStrip" class="sequence-strip"></div>
+            <div id="fretboard" class="fretboard"></div>
+            <div id="notePath" class="note-path"></div>
+
+            <div class="legend">
+              <span><i class="swatch scale"></i> tom</span>
+              <span><i class="swatch chord"></i> acorde</span>
+              <span><i class="swatch root"></i> tonica do acorde</span>
+              <span><i class="swatch target"></i> tocando</span>
+              <span><i class="swatch next"></i> proxima</span>
+            </div>
+          </section>
+        </section>
+
+        <section class="mission-band" aria-labelledby="missionsTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Missoes curtas</p>
+            <h2 id="missionsTitle">Menos lista, mais jogo</h2>
+            <p>
+              Cada carta e uma situacao musical pequena. Clique para carregar
+              no braco e estudar por sensacao, nao por decoracao.
+            </p>
+          </div>
+          <div id="missionGrid" class="mission-grid"></div>
+        </section>
+
+        <section class="song-band" aria-labelledby="songTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Musicas reais</p>
+            <h2 id="songTitle">Onde essa sequencia aparece?</h2>
+            <p>
+              Exemplos para orientar o ouvido. A progressao pode aparecer em
+              trecho, transposicao ou forma semelhante, entao use como ponto de
+              partida e confirme com a cifra/partitura da musica.
+            </p>
+          </div>
+          <div id="songExamples" class="song-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
