@@ -4,6 +4,12 @@ Um app de estudo de harmonia para baixistas, centrado no braco do baixo, no ouvi
 
 Este repositorio nasceu de um prototipo em HTML unico. A parte que vale preservar e evoluir e o braco visual: ver a harmonia acontecendo no instrumento. O resto sera redesenhado para deixar de ser uma lista longa de sequencias e virar uma experiencia didatica, divertida e progressiva.
 
+## Pagina publicada
+
+Quando o GitHub Pages estiver ativo, o app fica em:
+
+https://guidorafaelchaves.github.io/campo-harmonico/
+
 ## Estado atual
 
 - `index.html`: primeira versao redesenhada do app.
