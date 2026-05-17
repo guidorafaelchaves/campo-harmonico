@@ -26,8 +26,15 @@
       </header>
 
       <main>
+        <nav class="mobile-jump" aria-label="Atalhos de estudo">
+          <a href="#braco">Braco</a>
+          <a href="#controles">Controles</a>
+          <a href="#missoes">Missoes</a>
+          <a href="#musicas">Musicas</a>
+        </nav>
+
         <section class="workbench" aria-labelledby="playgroundTitle">
-          <aside class="control-rail">
+          <aside class="control-rail" id="controles">
             <div class="panel compact">
               <h2 id="playgroundTitle">Playground</h2>
               <label>
@@ -101,7 +108,7 @@
             </div>
           </aside>
 
-          <section class="stage" aria-label="Braco virtual interativo">
+          <section class="stage" id="braco" aria-label="Braco virtual interativo">
             <div class="stage-header">
               <div>
                 <p class="eyebrow">Braco virtual</p>
@@ -131,7 +138,7 @@
           </section>
         </section>
 
-        <section class="mission-band" aria-labelledby="missionsTitle">
+        <section class="mission-band" id="missoes" aria-labelledby="missionsTitle">
           <div class="section-heading">
             <p class="eyebrow">Missoes curtas</p>
             <h2 id="missionsTitle">Menos lista, mais jogo</h2>
@@ -143,7 +150,7 @@
           <div id="missionGrid" class="mission-grid"></div>
         </section>
 
-        <section class="song-band" aria-labelledby="songTitle">
+        <section class="song-band" id="musicas" aria-labelledby="songTitle">
           <div class="section-heading">
             <p class="eyebrow">Musicas reais</p>
             <h2 id="songTitle">Onde essa sequencia aparece?</h2>
